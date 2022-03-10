@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+header{
+    display: flex;
+    background-color: #1D1F1F;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.logo__text{
+    color: #FFBBD6;
+}
+#nav-menu{
+    display: flex;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+}
+.nav__items{
+    margin: 0 10px;
+}
+.nav__link{
+    padding: 10px;
+    color: #FFBBD6;
+    font-weight: 500;
+    font-size: 19px;
+    border-radius: 5px;
+    margin: 20px;
+}
+.nav__link:hover{
+    background-color: #FFBBD6;
+    color: #1D1F1F;
+}
+#header__close,
+#header__toggle{
+    display: none;
+}
+.membership__button{
+    display: flex;
+    margin-left: 45px;
+
+}
+.button{
+    display: flex;
+    background: #FFBBD6;
+    color: #1D1F1F;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    background: #FFBBD6;
+    color: white;
+}
+@media only screen and (max-width: 768px){
+    header{
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+    .logo a{
+        font-size: 1.0rem;
+    }
+    .logo img{
+        width: 32px;
+        height: 32px;
+    }
+    #header__toggle{
+        display: inline;
+        color: #FFBBD6;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    #header__close{
+        position: absolute;
+        right: 24px;
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .nav{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #1D1F1F;
+        width: 60%;
+        padding: 24px 0;
+        font-size: 17px;
+        z-index: 100;
+        transition: 1s;
+        color: #FFBBD6;
+        border-radius: 0 0 0 50%;
+        height: 100vh;
+    }
+    .nav__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav__item{
+        margin: 2rem 0;
+    }
+    .show{
+        right: 0;
+    }
+
+}
